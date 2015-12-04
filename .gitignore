@@ -1,0 +1,47 @@
+# Output files
+*.qmsg
+*.vo
+*.vho
+*.tdo
+*.sdo
+*.tao
+*.pin
+
+# Programming files
+*.cdf
+*.sof
+*.pof
+*.jam
+*.jbc
+*.jic
+*.jcf
+*.fcf
+
+# Report files
+*.rpt
+*.csf.rpt
+*.sim.rpt
+*.pao
+*.summary
+*.htm
+*.html
+*.csf.htm
+*.csf.html
+*.sim.htm
+*.sim.html
+
+# Quartus II project files
+*.qpf
+*.qdf
+*.qsf
+*.sdc
+*.qws
+
+# Quartus II compiled database
+db
+incremental_db
+[Rr]elease
+
+# Other files
+*.bak
+*.done
