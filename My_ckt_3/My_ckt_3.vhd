@@ -6,6 +6,9 @@ port(
 end My_ckt_3;
 
 architecture MODEL of My_ckt_3 is
+signal W_En: bit;
+signal R_Addr, W_Addr: bit_vector(2 downto 0);
+
 begin
 
 end MODEL;
