@@ -31,5 +31,38 @@ begin
                 else
                     next_stage <= Idle;
                 end if;
+                
+            when RState1 =>
+            
+            when RState2 =>
+            
+            when RState3 =>
+            
+            when RState4 =>
+            
+            when RState5 =>
+            
+            when RState6 =>
+            
+            when RState7 =>
+            
+            when RState8 =>
+            
+            when WState1 =>
+            
+            when WState2 =>
+            
+            when WState3 =>
+            
+            when WState4 =>
+            
+            when WState5 =>
+            
+            when WState6 =>
+            
+            when WState7 =>
+            
+            when WState8 =>
+            
     end
 end FSM;
