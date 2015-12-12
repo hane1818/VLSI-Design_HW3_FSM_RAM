@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL; 
+--use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.CONV_INTEGER; 
 
 entity RAM is
 port(
@@ -18,10 +18,10 @@ begin
     process(clk)
     begin
         if(clk'EVENT and clk='1') then
-            Data_Output <= Reg(R_Addr);
+            Data_Output <= Reg(conv_integer(R_Addr));
             
             if(W_En='1') then
-                Reg(W_Addr) <= Data_Input;
+                Reg(conv_integer(W_Addr)) <= Data_Input;
             end if;
         end if;
     end process;
