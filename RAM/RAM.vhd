@@ -7,6 +7,8 @@ port(
 end RAM;
 
 architecture MEMORY of RAM is
+type memory_t is array(7 downto 0) of bit_vector(7 downto 0);
+signal storage : memory_t;
 begin
 
 end MEMORY;
