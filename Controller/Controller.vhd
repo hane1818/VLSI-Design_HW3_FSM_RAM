@@ -18,13 +18,14 @@ begin
 
     process(current_stage)
     begin
+        R_Addr <= "000";
+        W_Addr <= "000";
+        W_En <= '0';
+        
         case current_stage is
             when Idle =>
-                R_Addr <= "000";
-                W_Addr <= "000";
-                W_En <= '0';
-                
                 if (Write='1') then
+                    W_En <= '1';
                     next_stage <= WState1;
                 elsif (Read='1') then
                     next_stage <= RState1;
