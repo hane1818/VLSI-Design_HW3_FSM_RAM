@@ -26,7 +26,6 @@ begin
         case current_state is
             when Idle =>
                 if (Write='1') then
-                    W_En <= '1';
                     next_state <= WState1;
                 elsif (Read='1') then
                     next_state <= RState1;
