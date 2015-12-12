@@ -16,4 +16,16 @@ begin
             current_stage <= next_stage;
     end
 
+    process(current_stage)
+    begin
+        case current_stage is
+            when Idle =>
+                if (Write='1') then
+                    next_stage <= WState1;
+                elsif (Read='1') then
+                    next_stage <= RState1;
+                else
+                    next_stage <= Idle;
+                end if;
+    end
 end FSM;
