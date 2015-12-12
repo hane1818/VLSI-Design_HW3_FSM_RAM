@@ -73,20 +73,51 @@ begin
                 next_state <= Idle;
             
             when WState1 =>
+                W_En <= '1';
+                
+                next_state <= WState2;
             
             when WState2 =>
+                W_EN <= '1';
+                W_Addr <= "001";
+                
+                next_state <= WState3;
             
             when WState3 =>
+                W_EN <= '1';
+                W_Addr <= "010";
+                
+                next_state <= WState4;
             
             when WState4 =>
+                W_EN <= '1';
+                W_Addr <= "011";
+                
+                next_state <= WState5;
             
             when WState5 =>
+                W_EN <= '1';
+                W_Addr <= "100";
+                
+                next_state <= WState6;
             
             when WState6 =>
+                W_EN <= '1';
+                W_Addr <= "101";
+                
+                next_state <= WState7;
             
             when WState7 =>
+                W_EN <= '1';
+                W_Addr <= "110";
+                
+                next_state <= WState8;
             
             when WState8 =>
+                W_EN <= '1';
+                W_Addr <= "111";
+                
+                next_state <= Idle;
         end case;
     end process;
 end FSM;
