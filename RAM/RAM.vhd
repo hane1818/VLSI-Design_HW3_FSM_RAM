@@ -1,13 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL; 
+
 entity RAM is
 port(
-    clk, W_En: in bit;
-    W_Addr, R_Addr: in bit_vector(2 downto 0);
-    Data_Input: in bit_vector(7 downto 0);
-    Data_Output: out bit_vector(7 downto 0));
+    clk, W_En: in std_logic;
+    W_Addr, R_Addr: in std_logic_vector(2 downto 0);
+    Data_Input: in std_logic_vector(7 downto 0);
+    Data_Output: out std_logic_vector(7 downto 0));
 end RAM;
 
 architecture MEMORY of RAM is
-type storage is array(7 downto 0) of bit_vector(7 downto 0);
+type storage is array(7 downto 0) of std_logic_vector(7 downto 0);
 signal Reg : storage;
 begin
     process(clk)

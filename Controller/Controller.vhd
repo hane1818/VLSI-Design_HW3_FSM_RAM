@@ -1,8 +1,11 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
 entity Controller is
 port(
-    clk, Read, Write: in bit;
-    W_En: out bit;
-    R_Addr, W_Addr: out bit_vector(2 downto 0));
+    clk, Read, Write: in std_logic;
+    W_En: out std_logic;
+    R_Addr, W_Addr: out std_logic_vector(2 downto 0));
 end Controller;
 
 architecture FSM of Controller is
