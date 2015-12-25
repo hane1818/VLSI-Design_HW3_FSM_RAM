@@ -16,12 +16,9 @@ signal Reg : storage;
 begin
     process(clk)
     begin
-        if(clk'EVENT and clk='1') then
-            Data_Output <= Reg(conv_integer(R_Addr));
-
-            if(W_En='1') then
-                Reg(conv_integer(W_Addr)) <= Data_Input;
-            end if;
+        Data_Output <= Reg(conv_integer(R_Addr));
+        if(W_En='1'and (clk'EVENT and clk='1')) then
+            Reg(conv_integer(W_Addr)) <= Data_Input;
         end if;
     end process;
 end MEMORY;
